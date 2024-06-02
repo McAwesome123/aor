@@ -7,7 +7,11 @@ AOR uses Qt5. In one way or another, you must have it to build.
 
 On Windows, Qt is linked statically. You will need to have statically compiled Qt5 binaries - you will likely need to compile them yourself. On Linux, QT is linked dynamically, and you will need Qt5 to be installed.
 
-There are some other dependencies (e.g. for the build scripts), but I will not give a complete overview of building the project here. If you need help building, [contact me](mailto:pierce@doughbyte.com).
+The build script on Windows requires the Visual Studio Developer Command Prompt and uses ImageMagick to convert images to grayscale.
+
+Build requirements on Linux may differ.
+
+If you need help building, [contact me](mailto:pierce@doughbyte.com).
 
 ## Contributing
 

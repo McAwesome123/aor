@@ -77,3 +77,6 @@ prof.stats
 aor
 aor.exe
 server/replay
+debug/*
+release/*
+aor_resource.rc
