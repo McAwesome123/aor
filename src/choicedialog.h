@@ -7,7 +7,7 @@
 
 #include "slot/choiceslot.h"
 
-class Item;
+struct Item;
 
 class ChoiceDialog : public QDialog {
 public:

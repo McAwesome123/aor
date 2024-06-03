@@ -28,11 +28,19 @@
 
 LKGameWindow *LKGameWindow::the_game_window;
 
+// allocator.construct() is deprecated; can't be bothered.
+#ifdef _MSC_VER
+#pragma warning (push)
+#pragma warning (disable: 4996)
+#endif  // _MSC_VER
 void LKGameWindow::instantiate_singleton() {
     std::allocator<LKGameWindow> alloc;
     the_game_window = alloc.allocate(1);
     alloc.construct(the_game_window);
 }
+#ifdef _MSC_VER
+#pragma warning (pop)
+#endif  // _MSC_VER
 
 LKGameWindow::LKGameWindow()
     : m_item_tooltip(new Tooltip()),
@@ -240,7 +248,7 @@ void LKGameWindow::refresh_slots() {
 }
 
 void LKGameWindow::refresh_ui_buttons() {
-    auto activities = selected_char().activities();
+    auto &activities = selected_char().activities();
     bool smithing_already_queued = std::any_of(activities.begin(), activities.end(), [](ActivityId aid) {
         return gw()->game()->activity(aid).explorer_subtype() == Smithing;
     });

@@ -105,11 +105,11 @@ void Slot::make_tall() {
 void Slot::mousePressEvent(QMouseEvent *event) {
     if (event->button() == Qt::LeftButton && is_draggable()) {
         QDrag *drag = new QDrag(this);
-        QMimeData *data = new QMimeData;
+        QMimeData *mimeData = new QMimeData;
         SlotMessage message = SlotMessage(SlotUserDrop, user_drop_data(), this);
 
-        data->setText(message.to_data_string());
-        drag->setMimeData(data);
+        mimeData->setText(message.to_data_string());
+        drag->setMimeData(mimeData);
 
         if (std::holds_alternative<Item>(message)) {
             drag->setPixmap(Item::pixmap_of(std::get<Item>(message)));
@@ -136,8 +136,8 @@ void Slot::mouseReleaseEvent(QMouseEvent *event) {
 }
 
 void Slot::dragEnterEvent(QDragEnterEvent *event) {
-    const QMimeData *data = event->mimeData();
-    SlotMessage payload = SlotMessage::from_data_string(data->text());
+    const QMimeData *mimeData = event->mimeData();
+    SlotMessage payload = SlotMessage::from_data_string(mimeData->text());
 
     if (!will_accept_drop(payload)) {
         return;
@@ -147,8 +147,8 @@ void Slot::dragEnterEvent(QDragEnterEvent *event) {
 }
 
 void Slot::dropEvent(QDropEvent *event) {
-    const QMimeData *data = event->mimeData();
-    SlotMessage message = SlotMessage::from_data_string(data->text());
+    const QMimeData *mimeData = event->mimeData();
+    SlotMessage message = SlotMessage::from_data_string(mimeData->text());
 
     accept_message(message);
 

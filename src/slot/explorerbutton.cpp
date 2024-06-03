@@ -210,7 +210,7 @@ PayloadVariant ExplorerButton::user_drop_data() {
 
 void ExplorerButton::install() {
     QGridLayout *layout = dynamic_cast<QGridLayout *>(gw()->window().explorer_slots->layout());
-    layout->addWidget(this, m_n / EXPLORER_COLS, m_n % EXPLORER_COLS);
+    layout->addWidget(this, (int)(m_n / EXPLORER_COLS), (int)(m_n % EXPLORER_COLS));
 }
 
 Character &ExplorerButton::character() {

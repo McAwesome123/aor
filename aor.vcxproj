@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{B6367A9C-43C0-4942-B710-223D51E35E9B}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>nmake debug</NMakeBuildCommandLine>
+    <NMakeOutput>.\debug\aor.exe</NMakeOutput>
+    <NMakeCleanCommandLine>nmake clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>set build_init_vsdev="D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64&amp;set build_qt5_path=D:\Qt\Qt-5.15.14\bin&amp;build.bat</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeBuildCommandLine>nmake debug</NMakeBuildCommandLine>
+    <NMakeOutput>.\debug\aor.exe</NMakeOutput>
+    <NMakeCleanCommandLine>nmake clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>set build_init_vsdev="D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64&amp;set build_qt5_path=D:\Qt\Qt-5.15.14\bin&amp;set build_debug=1&amp;build.bat</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>D:\Qt\Qt-5.15.14\include\QtNetwork;D:\Qt\Qt-5.15.14\include\QtMultimedia;D:\Qt\Qt-5.15.14\include\QtGui;D:\Qt\Qt-5.15.14\include\QtCore;D:\Qt\Qt-5.15.14\include\QtWidgets;D:\Qt\Qt-5.15.14\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <AdditionalOptions>/std:c++17 /external:W0</AdditionalOptions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>nmake release</NMakeBuildCommandLine>
+    <NMakeOutput>.\release\aor.exe</NMakeOutput>
+    <NMakeCleanCommandLine>nmake clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>set build_init_vsdev="D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64&amp;set build_qt5_path=D:\Qt\Qt-5.15.14\bin&amp;build.bat</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeBuildCommandLine>nmake release</NMakeBuildCommandLine>
+    <NMakeOutput>.\release\aor.exe</NMakeOutput>
+    <NMakeCleanCommandLine>nmake clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>set build_init_vsdev="D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64&amp;set build_qt5_path=D:\Qt\Qt-5.15.14\bin&amp;build.bat</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>D:\Qt\Qt-5.15.14\include\QtNetwork;D:\Qt\Qt-5.15.14\include\QtMultimedia;D:\Qt\Qt-5.15.14\include\QtGui;D:\Qt\Qt-5.15.14\include\QtCore;D:\Qt\Qt-5.15.14\include\QtWidgets;D:\Qt\Qt-5.15.14\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <AdditionalOptions>/std:c++17 /external:W0</AdditionalOptions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="release\moc_cheatconsole.cpp" />
+    <ClCompile Include="release\moc_encyclopedia.cpp" />
+    <ClCompile Include="release\moc_gamewindow.cpp" />
+    <ClCompile Include="release\qrc_images.cpp" />
+    <ClCompile Include="src\about.cpp" />
+    <ClCompile Include="src\character.cpp" />
+    <ClCompile Include="src\characteractivity.cpp" />
+    <ClCompile Include="src\cheatconsole.cpp" />
+    <ClCompile Include="src\choicedialog.cpp" />
+    <ClCompile Include="src\clampedresource.cpp" />
+    <ClCompile Include="src\colors.cpp" />
+    <ClCompile Include="src\die.cpp" />
+    <ClCompile Include="src\encryptedfile.cpp" />
+    <ClCompile Include="src\encyclopedia.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\gamenotification.cpp" />
+    <ClCompile Include="src\gamewindow.cpp" />
+    <ClCompile Include="src\generators.cpp" />
+    <ClCompile Include="src\icons.cpp" />
+    <ClCompile Include="src\inventory.cpp" />
+    <ClCompile Include="src\io.cpp" />
+    <ClCompile Include="src\itemproperties.cpp" />
+    <ClCompile Include="src\items.cpp" />
+    <ClCompile Include="src\locations.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\map.cpp" />
+    <ClCompile Include="src\menu.cpp" />
+    <ClCompile Include="src\settings.cpp" />
+    <ClCompile Include="src\slot\aboutslot.cpp" />
+    <ClCompile Include="src\slot\artifactslot.cpp" />
+    <ClCompile Include="src\slot\choiceslot.cpp" />
+    <ClCompile Include="src\slot\effectslot.cpp" />
+    <ClCompile Include="src\slot\encyclopediaslot.cpp" />
+    <ClCompile Include="src\slot\explorerbutton.cpp" />
+    <ClCompile Include="src\slot\externalslot.cpp" />
+    <ClCompile Include="src\slot\foreigntradeslot.cpp" />
+    <ClCompile Include="src\slot\inventoryslot.cpp" />
+    <ClCompile Include="src\slot\itemslot.cpp" />
+    <ClCompile Include="src\slot\locationslot.cpp" />
+    <ClCompile Include="src\slot\materialslot.cpp" />
+    <ClCompile Include="src\slot\portraitslot.cpp" />
+    <ClCompile Include="src\slot\queuedactivityslot.cpp" />
+    <ClCompile Include="src\slot\skillslot.cpp" />
+    <ClCompile Include="src\slot\slot.cpp" />
+    <ClCompile Include="src\slot\smithingresultslot.cpp" />
+    <ClCompile Include="src\slot\studyslot.cpp" />
+    <ClCompile Include="src\slot\toolslot.cpp" />
+    <ClCompile Include="src\slot\tradeslot.cpp" />
+    <ClCompile Include="src\slot\weathereffectslot.cpp" />
+    <ClCompile Include="src\sounds.cpp" />
+    <ClCompile Include="src\studyactivity.cpp" />
+    <ClCompile Include="src\timedactivity.cpp" />
+    <ClCompile Include="src\tooltip.cpp" />
+    <ClCompile Include="src\trade.cpp" />
+    <ClCompile Include="src\types.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="release\moc_predefs.h" />
+    <ClInclude Include="src\about.h" />
+    <ClInclude Include="src\character.h" />
+    <ClInclude Include="src\characteractivity.h" />
+    <ClInclude Include="src\cheatconsole.h" />
+    <ClInclude Include="src\choicedialog.h" />
+    <ClInclude Include="src\clampedresource.h" />
+    <ClInclude Include="src\colors.h" />
+    <ClInclude Include="src\definitionmark.h" />
+    <ClInclude Include="src\die.h" />
+    <ClInclude Include="src\encryptedfile.h" />
+    <ClInclude Include="src\encyclopedia.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\gamenotification.h" />
+    <ClInclude Include="src\gamewindow.h" />
+    <ClInclude Include="src\generators.h" />
+    <ClInclude Include="src\hooks.h" />
+    <ClInclude Include="src\icons.h" />
+    <ClInclude Include="src\inventory.h" />
+    <ClInclude Include="src\io.h" />
+    <ClInclude Include="src\itemproperties.h" />
+    <ClInclude Include="src\items.h" />
+    <ClInclude Include="src\locations.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\map.h" />
+    <ClInclude Include="src\menu.h" />
+    <ClInclude Include="src\ruin.h" />
+    <ClInclude Include="src\serialize.h" />
+    <ClInclude Include="src\settings.h" />
+    <ClInclude Include="src\slot\aboutslot.h" />
+    <ClInclude Include="src\slot\artifactslot.h" />
+    <ClInclude Include="src\slot\choiceslot.h" />
+    <ClInclude Include="src\slot\effectslot.h" />
+    <ClInclude Include="src\slot\encyclopediaslot.h" />
+    <ClInclude Include="src\slot\explorerbutton.h" />
+    <ClInclude Include="src\slot\externalslot.h" />
+    <ClInclude Include="src\slot\foreigntradeslot.h" />
+    <ClInclude Include="src\slot\inventoryslot.h" />
+    <ClInclude Include="src\slot\itemslot.h" />
+    <ClInclude Include="src\slot\locationslot.h" />
+    <ClInclude Include="src\slot\materialslot.h" />
+    <ClInclude Include="src\slot\portraitslot.h" />
+    <ClInclude Include="src\slot\queuedactivityslot.h" />
+    <ClInclude Include="src\slot\skillslot.h" />
+    <ClInclude Include="src\slot\slot.h" />
+    <ClInclude Include="src\slot\smithingresultslot.h" />
+    <ClInclude Include="src\slot\studyslot.h" />
+    <ClInclude Include="src\slot\toolslot.h" />
+    <ClInclude Include="src\slot\tradeslot.h" />
+    <ClInclude Include="src\slot\weathereffectslot.h" />
+    <ClInclude Include="src\sounds.h" />
+    <ClInclude Include="src\studyactivity.h" />
+    <ClInclude Include="src\timedactivity.h" />
+    <ClInclude Include="src\tooltip.h" />
+    <ClInclude Include="src\trade.h" />
+    <ClInclude Include="src\types.h" />
+    <ClInclude Include="ui_cheat.h" />
+    <ClInclude Include="ui_encyclopedia.h" />
+    <ClInclude Include="ui_log.h" />
+    <ClInclude Include="ui_main.h" />
+    <ClInclude Include="ui_tooltip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="aor_resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\ui\cheat.ui" />
+    <None Include="assets\ui\encyclopedia.ui" />
+    <None Include="assets\ui\log.ui" />
+    <None Include="assets\ui\main.ui" />
+    <None Include="assets\ui\tooltip.ui" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

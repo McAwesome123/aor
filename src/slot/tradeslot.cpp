@@ -25,10 +25,11 @@ void TradeSlot::accept_message(const SlotMessage &message) {
 
     switch (message.type) {
         case SlotSetItem: {
-            gw()->connection().offer_changed(my_item(), m_n);
+            gw()->connection().offer_changed(my_item(), (int)m_n);
             break;
         } case SlotForgetItem: {
-            gw()->connection().offer_changed(Item(), m_n);
+            gw()->connection().offer_changed(Item(), (int)m_n);
+            break;
         } default: {}
     }
 }

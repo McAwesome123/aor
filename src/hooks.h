@@ -13,7 +13,7 @@
 // WARNING: verbatim from generators.h, which we can't directly include
 template <typename T> using WeightedVector = std::vector<std::pair<T, double>>;
 
-class Item;
+struct Item;
 class Character;
 class ClampedResource;
 
