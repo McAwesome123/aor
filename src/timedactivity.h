@@ -9,7 +9,7 @@
 #include "types.h"
 #include "items.h"
 
-const static AorInt ACTIVITY_TICK_RATE_MS = 500;
+const static AorInt ACTIVITY_TICK_RATE_MS = 50;
 
 class TimedActivity : public Serializable {
 public:
