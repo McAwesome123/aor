@@ -7,7 +7,7 @@ TARGET = aor
 INCLUDEPATH += .
 CONFIG += debug_and_release
 CONFIG += static
-CONFIG += c++17
+CONFIG += c++20
 RC_ICONS = assets/icon.ico
 QMAKE_CXXFLAGS_WARN_ON ~= s/-W3/-W4
 

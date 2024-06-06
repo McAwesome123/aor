@@ -1,33 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="release\moc_cheatconsole.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_encyclopedia.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_gamewindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\qrc_images.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\about.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slot\aboutslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slot\artifactslot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\character.cpp">
@@ -42,6 +68,9 @@
     <ClCompile Include="src\choicedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\slot\choiceslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\clampedresource.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -51,10 +80,25 @@
     <ClCompile Include="src\die.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\slot\effectslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\encryptedfile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\encyclopedia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slot\encyclopediaslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slot\explorerbutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slot\externalslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slot\foreigntradeslot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\game.cpp">
@@ -75,6 +119,9 @@
     <ClCompile Include="src\inventory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\slot\inventoryslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\io.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -84,7 +131,13 @@
     <ClCompile Include="src\items.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\slot\itemslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\locations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slot\locationslot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\main.cpp">
@@ -93,70 +146,19 @@
     <ClCompile Include="src\map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\settings.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sounds.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\studyactivity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\timedactivity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\tooltip.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\trade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\types.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\aboutslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\artifactslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\choiceslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\effectslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\encyclopediaslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\explorerbutton.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\externalslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\foreigntradeslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\inventoryslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\itemslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\slot\locationslot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\slot\materialslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\slot\portraitslot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\slot\queuedactivityslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\settings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\slot\skillslot.cpp">
@@ -168,39 +170,48 @@
     <ClCompile Include="src\slot\smithingresultslot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\sounds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\studyactivity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\slot\studyslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timedactivity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\slot\toolslot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\tooltip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\slot\tradeslot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\slot\weathereffectslot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\infomessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ui_cheat.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ui_encyclopedia.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ui_log.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ui_main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ui_tooltip.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="release\moc_predefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\about.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slot\aboutslot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slot\artifactslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\character.h">
@@ -209,10 +220,13 @@
     <ClInclude Include="src\characteractivity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\cheatconsole.h">
+    <QtMoc Include="src\cheatconsole.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="src\choicedialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\choicedialog.h">
+    <ClInclude Include="src\slot\choiceslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\clampedresource.h">
@@ -227,93 +241,15 @@
     <ClInclude Include="src\die.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\encryptedfile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\encyclopedia.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\gamenotification.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\gamewindow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\generators.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\hooks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\icons.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\inventory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\io.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\itemproperties.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\items.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\locations.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\map.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\menu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ruin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\serialize.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\settings.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sounds.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\studyactivity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\timedactivity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tooltip.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\trade.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\types.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\slot\aboutslot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\slot\artifactslot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\slot\choiceslot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\slot\effectslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\encryptedfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\encyclopedia.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
     <ClInclude Include="src\slot\encyclopediaslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -326,22 +262,73 @@
     <ClInclude Include="src\slot\foreigntradeslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gamenotification.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="src\gamewindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="src\generators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hooks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\icons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inventory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\slot\inventoryslot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\itemproperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\items.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\slot\itemslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\locations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\slot\locationslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\slot\materialslot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\slot\portraitslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\slot\queuedactivityslot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ruin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\serialize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\settings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\slot\skillslot.h">
@@ -353,22 +340,707 @@
     <ClInclude Include="src\slot\smithingresultslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\sounds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\studyactivity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\slot\studyslot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timedactivity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\slot\toolslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\tooltip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\trade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\slot\tradeslot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\slot\weathereffectslot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\infomessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="aor_resource.rc">
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="assets\ui\cheat.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="assets\ui\encyclopedia.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="assets\ui\log.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="assets\ui\main.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="assets\ui\tooltip.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\img\map\0-0-1-1.png">
       <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    </None>
+    <None Include="assets\img\map\0-1-0-1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\0-1-1-0.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\0-1-1-1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\1-0-0-1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\1-0-1-0.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\1-0-1-1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\1-1-0-0.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\1-1-0-1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\1-1-1-0.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\1-1-1-1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\acid_stingers.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\acid_stingers.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\advanced_coniine_and_phoratoxin_iris.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\advanced_coniine_and_phoratoxin_iris.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\amniotic_cable.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\amniotic_cable.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\apple.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\apple_big.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\arrow.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\arrow_big.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\arrows.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\arrows_disabled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\style\bg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\binary_pesticide.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\binary_pesticide.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\blank.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\bleeding_wildheart.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\bleeding_wildheart.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\bolt.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\byteberry.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\byteberry.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\check.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\cobolt_bar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\cobolt_bar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\copycap.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\copycap.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\corrupting_nematode.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\corrupting_nematode.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\couple.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\lk\coupling.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\crystalline.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\crystals.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\lk\dead.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\dead_yok.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\defile.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\lk\defiling.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\defragmenter.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\defragmenter.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\detritus_reapers.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\detritus_reapers.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\disconnected_socket.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\disconnected_socket.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\double_vision.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\double_vision.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\downarrow.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\drag.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\drop.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\drop_fruit.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\drop_material.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\dynamic_digestion.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\dynamic_digestion.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\eat.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\lk\eating.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\empty.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\empty.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\fennahian_egg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\fennahian_egg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\fireclay.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\fireclay.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\focussigil.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\focussigil2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\focussigil_big.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\forage.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\lk\foraging.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\fungified_token.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\fungified_token.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\ghidrakes_breath.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\ghidrakes_breath.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\globfruit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\globfruit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\hammer.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\hammer_big.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\hashcracker.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\hashcracker.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\haskeel.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\haskeel.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\heart.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\heart_big.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\honeykey.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\honeykey.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\lk\idle.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="images.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="assets\img\icons\jungle.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\leaf.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\leaf_big.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\leafy.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\loreglyph.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\maven_mallet.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\maven_mallet.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\mesa.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\metallic.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\metamorphic_destructor.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\metamorphic_destructor.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\mine.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\lk\mining.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\missing.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\missing.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\mouse.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\mycrocelium_oasis.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\mycrocelium_oasis.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\nonvolatile_compounds.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\nonvolatile_compounds.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\norton_ghost_pepper.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\norton_ghost_pepper.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\obsessive_checksum_disorder.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\obsessive_checksum_disorder.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\obsilicon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\obsilicon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\oolite.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\oolite.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\page_fault.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\page_fault.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\pentium_bar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\pentium_bar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\pentium_mines.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\pentium_mines.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\pick.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\pick_material.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\pipeapple.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\pipeapple.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\point_entry.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\point_entry.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\polymore.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\polymore.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\recovered_journal.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\recovered_journal.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\registry_hive.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\registry_hive.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\rock_big.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\rocking_obelisk.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\rocking_obelisk.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\roses.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\rowhammer.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\rowhammer.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\rubygem.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\rubygem.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\runic.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\rusted_bar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\rusted_bar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\scalped_remains.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\scalped_remains.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\scandiskium.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\scandiskium.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\seaquake.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\seaquake.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\shellfish.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\shellfish.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sigtermite_nest.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\sigtermite_nest.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\smith.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\lk\smithing.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\solid_slate.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\solid_slate.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\spearfisher.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\spearfisher.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\spinal_trap.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\spinal_trap.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\spirit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\spirit_big.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_black_filled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_black_unfilled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_blue_filled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_blue_unfilled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_green_filled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_green_unfilled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_pink_filled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_pink_unfilled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_purple_filled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sq_purple_unfilled.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\starving.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\starving.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\stone.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\sun.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\the_southbridge.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\the_southbridge.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\the_tree_of_roses.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\the_tree_of_roses.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\threat.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\tick.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\wav\trade.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\lk\trading.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\unaligned_terrain.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\unaligned_terrain.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\unified_egg_firmware_interface.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\unified_egg_firmware_interface.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\unknown-cursor.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\unknown-hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\map\unknown.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\unstable_division.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\unstable_division.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\virtualized_fruit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\virtualized_fruit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\warning.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\weakness.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\weakness.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\welchian_fever.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\welchian_fever.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\welchian_rune.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\welchian_rune.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\sil\wolframite_alpha.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\items\wolframite_alpha.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\img\icons\yok.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\aor_resource.rc" />
   </ItemGroup>
 </Project>

@@ -2,6 +2,7 @@
 // This software is licensed under the terms of the Lesser GNU General Public License.
 
 #include <QScrollBar>
+#include <memory>
 
 #include "gamewindow.h"
 #include "items.h"
@@ -28,19 +29,11 @@
 
 LKGameWindow *LKGameWindow::the_game_window;
 
-// allocator.construct() is deprecated; can't be bothered.
-#ifdef _MSC_VER
-#pragma warning (push)
-#pragma warning (disable: 4996)
-#endif  // _MSC_VER
 void LKGameWindow::instantiate_singleton() {
     std::allocator<LKGameWindow> alloc;
     the_game_window = alloc.allocate(1);
-    alloc.construct(the_game_window);
+    std::construct_at(the_game_window);
 }
-#ifdef _MSC_VER
-#pragma warning (pop)
-#endif  // _MSC_VER
 
 LKGameWindow::LKGameWindow()
     : m_item_tooltip(new Tooltip()),
