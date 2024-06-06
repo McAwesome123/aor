@@ -25,5 +25,5 @@ QPixmap ChoiceSlot::pixmap() {
 }
 
 void ChoiceSlot::on_left_click(QMouseEvent *) {
-    m_dialog->done(m_n);
+    m_dialog->done((int)m_n);
 }

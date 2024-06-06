@@ -6,8 +6,14 @@
 #include "character.h"
 #include "choicedialog.h"
 
+#ifdef __GNUC__
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 #pragma GCC diagnostic ignored "-Wunused-variable"
+#endif  // __GNUC__
+#ifdef _MSC_VER
+#pragma warning (push)
+#pragma warning (disable: 4100 4189 4101)
+#endif  // _MSC_VER
 
 #define HOOK_0 [](const HookPayload &, AorUInt prop_value) {}
 
@@ -33,7 +39,7 @@ void geometric_shift(AorInt *value, AorInt extra_noise) {
     AorUInt seed = gw()->game()->game_id() * gw()->game()->game_id() + extra_noise;
     bool decrease = seed & 1;
     for (AorUInt i = 4; i < 64; i += 4) {
-        if (((seed & (0xf << (i - 4))) >> (i - 4)) > 4) {
+        if (((seed & ((unsigned long long)0xF << (i - 4))) >> (i - 4)) > 4) {
             *value += decrease ? -1 : 1;
         } else {
             break;
@@ -231,7 +237,7 @@ const std::map<ItemProperty, PropertyDefinition> &property_definitions() {
                     QDrag::cancel();
                     ChoiceDialog choice_dialog(choices);
 
-                    auto choice = choices[choice_dialog.exec()];
+                    auto &choice = choices[choice_dialog.exec()];
                     choices.clear();
                     choices.push_back(choice);
                 }
@@ -541,3 +547,7 @@ void ItemProperties::serialize(QIODevice *dev) const {
 void ItemProperties::deserialize(QIODevice *dev) {
     Serialize::deserialize(dev, map);
 }
+
+#ifdef _MSC_VER
+#pragma warning (pop)
+#endif _MSC_VER

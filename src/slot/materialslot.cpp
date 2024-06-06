@@ -15,7 +15,7 @@ bool MaterialSlot::will_accept_drop(const SlotMessage &message) {
 }
 
 void MaterialSlot::install() {
-    gw()->window().smith_layout->addWidget(this, m_n / SMITHING_SLOTS_PER_ROW + 1, m_n % SMITHING_SLOTS_PER_ROW);
+    gw()->window().smith_layout->addWidget(this, (int)(m_n / SMITHING_SLOTS_PER_ROW + 1), (int)(m_n % SMITHING_SLOTS_PER_ROW));
 }
 
 ItemId &MaterialSlot::my_item_id() {

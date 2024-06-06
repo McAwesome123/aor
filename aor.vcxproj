@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{646E919A-446E-3FAC-ABF8-00C54833E973}</ProjectGuid>
+    <RootNamespace>aor</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.22621.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <ProjectName>aor</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>aor</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>aor</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>Qt_Qt-5.15.14</QtInstall>
+    <QtModules>core;network;gui;multimedia;widgets</QtModules>
+    <QtDeploy>true</QtDeploy>
+    <QtDeployDir>@(Qt->'%(OutDir)')deploy\</QtDeployDir>
+    <QtDeployFiles>
+    </QtDeployFiles>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>Qt_Qt-5.15.14</QtInstall>
+    <QtModules>core;network;gui;multimedia;widgets</QtModules>
+    <QtDeploy>true</QtDeploy>
+    <QtDeployDir>@(Qt->'%(OutDir)')deploy\</QtDeployDir>
+    <QtDeployFiles>
+    </QtDeployFiles>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') OR !Exists('$(QtMsBuild)\Qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">aor</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">aor</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <CustomBuildBeforeTargets>
+    </CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <CustomBuildBeforeTargets>QtDeploy</CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DISABLE_DEPRECATED_BEFORE=0x060000;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExternalWarningLevel>Level2</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\aor.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DISABLE_DEPRECATED_BEFORE=0x060000;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>images</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+    <CustomBuildStep>
+      <Command>if not exist '$(QtDeployDir)' mkdir $(QtDeployDir)
+copy $(TargetPath) $(QtDeployDir)</Command>
+      <TreatOutputAsContent>true</TreatOutputAsContent>
+      <Outputs>$(OutDir)deploy\$(TargetFileName)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;release;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DISABLE_DEPRECATED_BEFORE=0x060000;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExternalWarningLevel>Level2</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\aor.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DISABLE_DEPRECATED_BEFORE=0x060000;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>images</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+    <CustomBuildStep>
+      <Command>if not exist $(QtDeployDir) mkdir $(QtDeployDir)
+copy $(TargetPath) $(QtDeployDir)</Command>
+      <TreatOutputAsContent>true</TreatOutputAsContent>
+      <Outputs>$(OutDir)deploy\$(TargetFileName)</Outputs>
+      <Message>Copying Before Deploy</Message>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\about.cpp" />
+    <ClCompile Include="src\infomessage.cpp" />
+    <ClCompile Include="src\slot\aboutslot.cpp" />
+    <ClCompile Include="src\slot\artifactslot.cpp" />
+    <ClCompile Include="src\character.cpp" />
+    <ClCompile Include="src\characteractivity.cpp" />
+    <ClCompile Include="src\cheatconsole.cpp" />
+    <ClCompile Include="src\choicedialog.cpp" />
+    <ClCompile Include="src\slot\choiceslot.cpp" />
+    <ClCompile Include="src\clampedresource.cpp" />
+    <ClCompile Include="src\colors.cpp" />
+    <ClCompile Include="src\die.cpp" />
+    <ClCompile Include="src\slot\effectslot.cpp" />
+    <ClCompile Include="src\encryptedfile.cpp" />
+    <ClCompile Include="src\encyclopedia.cpp" />
+    <ClCompile Include="src\slot\encyclopediaslot.cpp" />
+    <ClCompile Include="src\slot\explorerbutton.cpp" />
+    <ClCompile Include="src\slot\externalslot.cpp" />
+    <ClCompile Include="src\slot\foreigntradeslot.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\gamenotification.cpp" />
+    <ClCompile Include="src\gamewindow.cpp" />
+    <ClCompile Include="src\generators.cpp" />
+    <ClCompile Include="src\icons.cpp" />
+    <ClCompile Include="src\inventory.cpp" />
+    <ClCompile Include="src\slot\inventoryslot.cpp" />
+    <ClCompile Include="src\io.cpp" />
+    <ClCompile Include="src\itemproperties.cpp" />
+    <ClCompile Include="src\items.cpp" />
+    <ClCompile Include="src\slot\itemslot.cpp" />
+    <ClCompile Include="src\locations.cpp" />
+    <ClCompile Include="src\slot\locationslot.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\map.cpp" />
+    <ClCompile Include="src\slot\materialslot.cpp" />
+    <ClCompile Include="src\menu.cpp" />
+    <ClCompile Include="src\slot\portraitslot.cpp" />
+    <ClCompile Include="src\slot\queuedactivityslot.cpp" />
+    <ClCompile Include="src\settings.cpp" />
+    <ClCompile Include="src\slot\skillslot.cpp" />
+    <ClCompile Include="src\slot\slot.cpp" />
+    <ClCompile Include="src\slot\smithingresultslot.cpp" />
+    <ClCompile Include="src\sounds.cpp" />
+    <ClCompile Include="src\studyactivity.cpp" />
+    <ClCompile Include="src\slot\studyslot.cpp" />
+    <ClCompile Include="src\timedactivity.cpp" />
+    <ClCompile Include="src\slot\toolslot.cpp" />
+    <ClCompile Include="src\tooltip.cpp" />
+    <ClCompile Include="src\trade.cpp" />
+    <ClCompile Include="src\slot\tradeslot.cpp" />
+    <ClCompile Include="src\types.cpp" />
+    <ClCompile Include="src\slot\weathereffectslot.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\about.h" />
+    <ClInclude Include="src\infomessage.h" />
+    <ClInclude Include="src\slot\aboutslot.h" />
+    <ClInclude Include="src\slot\artifactslot.h" />
+    <ClInclude Include="src\character.h" />
+    <ClInclude Include="src\characteractivity.h" />
+    <QtMoc Include="src\cheatconsole.h" />
+    <ClInclude Include="src\choicedialog.h" />
+    <ClInclude Include="src\slot\choiceslot.h" />
+    <ClInclude Include="src\clampedresource.h" />
+    <ClInclude Include="src\colors.h" />
+    <ClInclude Include="src\definitionmark.h" />
+    <ClInclude Include="src\die.h" />
+    <ClInclude Include="src\slot\effectslot.h" />
+    <ClInclude Include="src\encryptedfile.h" />
+    <QtMoc Include="src\encyclopedia.h" />
+    <ClInclude Include="src\slot\encyclopediaslot.h" />
+    <ClInclude Include="src\slot\explorerbutton.h" />
+    <ClInclude Include="src\slot\externalslot.h" />
+    <ClInclude Include="src\slot\foreigntradeslot.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\gamenotification.h" />
+    <QtMoc Include="src\gamewindow.h" />
+    <ClInclude Include="src\generators.h" />
+    <ClInclude Include="src\hooks.h" />
+    <ClInclude Include="src\icons.h" />
+    <ClInclude Include="src\inventory.h" />
+    <ClInclude Include="src\slot\inventoryslot.h" />
+    <ClInclude Include="src\io.h" />
+    <ClInclude Include="src\itemproperties.h" />
+    <ClInclude Include="src\items.h" />
+    <ClInclude Include="src\slot\itemslot.h" />
+    <ClInclude Include="src\locations.h" />
+    <ClInclude Include="src\slot\locationslot.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\map.h" />
+    <ClInclude Include="src\slot\materialslot.h" />
+    <ClInclude Include="src\menu.h" />
+    <ClInclude Include="src\slot\portraitslot.h" />
+    <ClInclude Include="src\slot\queuedactivityslot.h" />
+    <ClInclude Include="src\ruin.h" />
+    <ClInclude Include="src\serialize.h" />
+    <ClInclude Include="src\settings.h" />
+    <ClInclude Include="src\slot\skillslot.h" />
+    <ClInclude Include="src\slot\slot.h" />
+    <ClInclude Include="src\slot\smithingresultslot.h" />
+    <ClInclude Include="src\sounds.h" />
+    <ClInclude Include="src\studyactivity.h" />
+    <ClInclude Include="src\slot\studyslot.h" />
+    <ClInclude Include="src\timedactivity.h" />
+    <ClInclude Include="src\slot\toolslot.h" />
+    <ClInclude Include="src\tooltip.h" />
+    <ClInclude Include="src\trade.h" />
+    <ClInclude Include="src\slot\tradeslot.h" />
+    <ClInclude Include="src\types.h" />
+    <ClInclude Include="src\slot\weathereffectslot.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -std:c++17 -W4 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;$(IntDir)\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -std:c++17 -W4 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;$(IntDir)\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="assets\ui\cheat.ui" />
+    <QtUic Include="assets\ui\encyclopedia.ui" />
+    <QtUic Include="assets\ui\log.ui" />
+    <QtUic Include="assets\ui\main.ui" />
+    <QtUic Include="assets\ui\tooltip.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\img\map\0-0-1-1.png" />
+    <None Include="assets\img\map\0-1-0-1.png" />
+    <None Include="assets\img\map\0-1-1-0.png" />
+    <None Include="assets\img\map\0-1-1-1.png" />
+    <None Include="assets\img\map\1-0-0-1.png" />
+    <None Include="assets\img\map\1-0-1-0.png" />
+    <None Include="assets\img\map\1-0-1-1.png" />
+    <None Include="assets\img\map\1-1-0-0.png" />
+    <None Include="assets\img\map\1-1-0-1.png" />
+    <None Include="assets\img\map\1-1-1-0.png" />
+    <None Include="assets\img\map\1-1-1-1.png" />
+    <None Include="assets\img\items\acid_stingers.png" />
+    <None Include="assets\img\items\sil\acid_stingers.png" />
+    <None Include="assets\img\items\advanced_coniine_and_phoratoxin_iris.png" />
+    <None Include="assets\img\items\sil\advanced_coniine_and_phoratoxin_iris.png" />
+    <None Include="assets\img\items\amniotic_cable.png" />
+    <None Include="assets\img\items\sil\amniotic_cable.png" />
+    <None Include="assets\img\icons\apple.png" />
+    <None Include="assets\img\icons\apple_big.png" />
+    <None Include="assets\img\icons\arrow.png" />
+    <None Include="assets\img\icons\arrow_big.png" />
+    <None Include="assets\img\icons\arrows.png" />
+    <None Include="assets\img\icons\arrows_disabled.png" />
+    <None Include="assets\img\style\bg.png" />
+    <None Include="assets\img\items\binary_pesticide.png" />
+    <None Include="assets\img\items\sil\binary_pesticide.png" />
+    <None Include="assets\img\icons\blank.png" />
+    <None Include="assets\img\items\bleeding_wildheart.png" />
+    <None Include="assets\img\items\sil\bleeding_wildheart.png" />
+    <None Include="assets\img\icons\bolt.png" />
+    <None Include="assets\img\items\byteberry.png" />
+    <None Include="assets\img\items\sil\byteberry.png" />
+    <None Include="assets\img\icons\check.png" />
+    <None Include="assets\img\items\cobolt_bar.png" />
+    <None Include="assets\img\items\sil\cobolt_bar.png" />
+    <None Include="assets\img\items\copycap.png" />
+    <None Include="assets\img\items\sil\copycap.png" />
+    <None Include="assets\img\items\corrupting_nematode.png" />
+    <None Include="assets\img\items\sil\corrupting_nematode.png" />
+    <None Include="assets\wav\couple.wav" />
+    <None Include="assets\img\lk\coupling.png" />
+    <None Include="assets\img\icons\crystalline.png" />
+    <None Include="assets\img\icons\crystals.png" />
+    <None Include="assets\img\lk\dead.png" />
+    <None Include="assets\img\icons\dead_yok.png" />
+    <None Include="assets\wav\defile.wav" />
+    <None Include="assets\img\lk\defiling.png" />
+    <None Include="assets\img\items\defragmenter.png" />
+    <None Include="assets\img\items\sil\defragmenter.png" />
+    <None Include="assets\img\items\detritus_reapers.png" />
+    <None Include="assets\img\items\sil\detritus_reapers.png" />
+    <None Include="assets\img\items\disconnected_socket.png" />
+    <None Include="assets\img\items\sil\disconnected_socket.png" />
+    <None Include="assets\img\items\double_vision.png" />
+    <None Include="assets\img\items\sil\double_vision.png" />
+    <None Include="assets\img\icons\downarrow.png" />
+    <None Include="assets\wav\drag.wav" />
+    <None Include="assets\wav\drop.wav" />
+    <None Include="assets\wav\drop_fruit.wav" />
+    <None Include="assets\wav\drop_material.wav" />
+    <None Include="assets\img\items\dynamic_digestion.png" />
+    <None Include="assets\img\items\sil\dynamic_digestion.png" />
+    <None Include="assets\wav\eat.wav" />
+    <None Include="assets\img\lk\eating.png" />
+    <None Include="assets\img\items\empty.png" />
+    <None Include="assets\img\items\sil\empty.png" />
+    <None Include="assets\img\items\fennahian_egg.png" />
+    <None Include="assets\img\items\sil\fennahian_egg.png" />
+    <None Include="assets\img\items\fireclay.png" />
+    <None Include="assets\img\items\sil\fireclay.png" />
+    <None Include="assets\img\icons\focussigil.png" />
+    <None Include="assets\img\icons\focussigil2.png" />
+    <None Include="assets\img\icons\focussigil_big.png" />
+    <None Include="assets\wav\forage.wav" />
+    <None Include="assets\img\lk\foraging.png" />
+    <None Include="assets\img\items\fungified_token.png" />
+    <None Include="assets\img\items\sil\fungified_token.png" />
+    <None Include="assets\img\items\ghidrakes_breath.png" />
+    <None Include="assets\img\items\sil\ghidrakes_breath.png" />
+    <None Include="assets\img\items\globfruit.png" />
+    <None Include="assets\img\items\sil\globfruit.png" />
+    <None Include="assets\img\icons\hammer.png" />
+    <None Include="assets\img\icons\hammer_big.png" />
+    <None Include="assets\img\items\hashcracker.png" />
+    <None Include="assets\img\items\sil\hashcracker.png" />
+    <None Include="assets\img\items\haskeel.png" />
+    <None Include="assets\img\items\sil\haskeel.png" />
+    <None Include="assets\img\icons\heart.png" />
+    <None Include="assets\img\icons\heart_big.png" />
+    <None Include="assets\img\items\honeykey.png" />
+    <None Include="assets\img\items\sil\honeykey.png" />
+    <None Include="assets\img\lk\idle.png" />
+    <QtRcc Include="images.qrc" />
+    <None Include="assets\img\icons\jungle.png" />
+    <None Include="assets\img\icons\leaf.png" />
+    <None Include="assets\img\icons\leaf_big.png" />
+    <None Include="assets\img\icons\leafy.png" />
+    <None Include="assets\img\icons\loreglyph.png" />
+    <None Include="assets\img\items\maven_mallet.png" />
+    <None Include="assets\img\items\sil\maven_mallet.png" />
+    <None Include="assets\img\icons\mesa.png" />
+    <None Include="assets\img\icons\metallic.png" />
+    <None Include="assets\img\items\metamorphic_destructor.png" />
+    <None Include="assets\img\items\sil\metamorphic_destructor.png" />
+    <None Include="assets\wav\mine.wav" />
+    <None Include="assets\img\lk\mining.png" />
+    <None Include="assets\img\items\missing.png" />
+    <None Include="assets\img\items\sil\missing.png" />
+    <None Include="assets\wav\mouse.wav" />
+    <None Include="assets\img\items\mycrocelium_oasis.png" />
+    <None Include="assets\img\items\sil\mycrocelium_oasis.png" />
+    <None Include="assets\img\items\nonvolatile_compounds.png" />
+    <None Include="assets\img\items\sil\nonvolatile_compounds.png" />
+    <None Include="assets\img\items\norton_ghost_pepper.png" />
+    <None Include="assets\img\items\sil\norton_ghost_pepper.png" />
+    <None Include="assets\img\items\obsessive_checksum_disorder.png" />
+    <None Include="assets\img\items\sil\obsessive_checksum_disorder.png" />
+    <None Include="assets\img\items\obsilicon.png" />
+    <None Include="assets\img\items\sil\obsilicon.png" />
+    <None Include="assets\img\items\oolite.png" />
+    <None Include="assets\img\items\sil\oolite.png" />
+    <None Include="assets\img\items\page_fault.png" />
+    <None Include="assets\img\items\sil\page_fault.png" />
+    <None Include="assets\img\items\pentium_bar.png" />
+    <None Include="assets\img\items\sil\pentium_bar.png" />
+    <None Include="assets\img\items\pentium_mines.png" />
+    <None Include="assets\img\items\sil\pentium_mines.png" />
+    <None Include="assets\img\icons\pick.png" />
+    <None Include="assets\wav\pick_material.wav" />
+    <None Include="assets\img\items\pipeapple.png" />
+    <None Include="assets\img\items\sil\pipeapple.png" />
+    <None Include="assets\img\items\point_entry.png" />
+    <None Include="assets\img\items\sil\point_entry.png" />
+    <None Include="assets\img\items\polymore.png" />
+    <None Include="assets\img\items\sil\polymore.png" />
+    <None Include="assets\img\items\recovered_journal.png" />
+    <None Include="assets\img\items\sil\recovered_journal.png" />
+    <None Include="assets\img\items\registry_hive.png" />
+    <None Include="assets\img\items\sil\registry_hive.png" />
+    <None Include="assets\img\icons\rock_big.png" />
+    <None Include="assets\img\items\rocking_obelisk.png" />
+    <None Include="assets\img\items\sil\rocking_obelisk.png" />
+    <None Include="assets\img\icons\roses.png" />
+    <None Include="assets\img\items\rowhammer.png" />
+    <None Include="assets\img\items\sil\rowhammer.png" />
+    <None Include="assets\img\items\rubygem.png" />
+    <None Include="assets\img\items\sil\rubygem.png" />
+    <None Include="assets\img\icons\runic.png" />
+    <None Include="assets\img\items\rusted_bar.png" />
+    <None Include="assets\img\items\sil\rusted_bar.png" />
+    <None Include="assets\img\items\scalped_remains.png" />
+    <None Include="assets\img\items\sil\scalped_remains.png" />
+    <None Include="assets\img\items\scandiskium.png" />
+    <None Include="assets\img\items\sil\scandiskium.png" />
+    <None Include="assets\img\items\seaquake.png" />
+    <None Include="assets\img\items\sil\seaquake.png" />
+    <None Include="assets\img\items\shellfish.png" />
+    <None Include="assets\img\items\sil\shellfish.png" />
+    <None Include="assets\img\items\sigtermite_nest.png" />
+    <None Include="assets\img\items\sil\sigtermite_nest.png" />
+    <None Include="assets\wav\smith.wav" />
+    <None Include="assets\img\lk\smithing.png" />
+    <None Include="assets\img\items\sil\solid_slate.png" />
+    <None Include="assets\img\items\solid_slate.png" />
+    <None Include="assets\img\items\sil\spearfisher.png" />
+    <None Include="assets\img\items\spearfisher.png" />
+    <None Include="assets\img\items\sil\spinal_trap.png" />
+    <None Include="assets\img\items\spinal_trap.png" />
+    <None Include="assets\img\icons\spirit.png" />
+    <None Include="assets\img\icons\spirit_big.png" />
+    <None Include="assets\img\icons\sq_black_filled.png" />
+    <None Include="assets\img\icons\sq_black_unfilled.png" />
+    <None Include="assets\img\icons\sq_blue_filled.png" />
+    <None Include="assets\img\icons\sq_blue_unfilled.png" />
+    <None Include="assets\img\icons\sq_green_filled.png" />
+    <None Include="assets\img\icons\sq_green_unfilled.png" />
+    <None Include="assets\img\icons\sq_pink_filled.png" />
+    <None Include="assets\img\icons\sq_pink_unfilled.png" />
+    <None Include="assets\img\icons\sq_purple_filled.png" />
+    <None Include="assets\img\icons\sq_purple_unfilled.png" />
+    <None Include="assets\img\items\sil\starving.png" />
+    <None Include="assets\img\items\starving.png" />
+    <None Include="assets\img\icons\stone.png" />
+    <None Include="assets\img\icons\sun.png" />
+    <None Include="assets\img\items\sil\the_southbridge.png" />
+    <None Include="assets\img\items\the_southbridge.png" />
+    <None Include="assets\img\items\sil\the_tree_of_roses.png" />
+    <None Include="assets\img\items\the_tree_of_roses.png" />
+    <None Include="assets\img\icons\threat.png" />
+    <None Include="assets\wav\tick.wav" />
+    <None Include="assets\wav\trade.wav" />
+    <None Include="assets\img\lk\trading.png" />
+    <None Include="assets\img\items\sil\unaligned_terrain.png" />
+    <None Include="assets\img\items\unaligned_terrain.png" />
+    <None Include="assets\img\items\sil\unified_egg_firmware_interface.png" />
+    <None Include="assets\img\items\unified_egg_firmware_interface.png" />
+    <None Include="assets\img\map\unknown-cursor.png" />
+    <None Include="assets\img\map\unknown-hover.png" />
+    <None Include="assets\img\map\unknown.png" />
+    <None Include="assets\img\items\sil\unstable_division.png" />
+    <None Include="assets\img\items\unstable_division.png" />
+    <None Include="assets\img\items\sil\virtualized_fruit.png" />
+    <None Include="assets\img\items\virtualized_fruit.png" />
+    <None Include="assets\img\icons\warning.png" />
+    <None Include="assets\img\items\sil\weakness.png" />
+    <None Include="assets\img\items\weakness.png" />
+    <None Include="assets\img\items\sil\welchian_fever.png" />
+    <None Include="assets\img\items\welchian_fever.png" />
+    <None Include="assets\img\items\sil\welchian_rune.png" />
+    <None Include="assets\img\items\welchian_rune.png" />
+    <None Include="assets\img\items\sil\wolframite_alpha.png" />
+    <None Include="assets\img\items\wolframite_alpha.png" />
+    <None Include="assets\img\icons\yok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\aor_resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

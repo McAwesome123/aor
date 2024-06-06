@@ -2,6 +2,7 @@
 // This software is licensed under the terms of the Lesser GNU General Public License.
 
 #include <QScrollBar>
+#include <memory>
 
 #include "gamewindow.h"
 #include "items.h"
@@ -31,7 +32,7 @@ LKGameWindow *LKGameWindow::the_game_window;
 void LKGameWindow::instantiate_singleton() {
     std::allocator<LKGameWindow> alloc;
     the_game_window = alloc.allocate(1);
-    alloc.construct(the_game_window);
+    std::construct_at(the_game_window);
 }
 
 LKGameWindow::LKGameWindow()
@@ -240,7 +241,7 @@ void LKGameWindow::refresh_slots() {
 }
 
 void LKGameWindow::refresh_ui_buttons() {
-    auto activities = selected_char().activities();
+    auto &activities = selected_char().activities();
     bool smithing_already_queued = std::any_of(activities.begin(), activities.end(), [](ActivityId aid) {
         return gw()->game()->activity(aid).explorer_subtype() == Smithing;
     });
